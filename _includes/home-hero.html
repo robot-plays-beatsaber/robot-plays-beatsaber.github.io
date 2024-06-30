@@ -1,0 +1,97 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          {% if site.title != '' %}
+          <h1 class="text-center">{{site.title}}</h1>
+          {% endif %}
+
+          <p class="text-center">
+            <a href="http://namheegordonkim.github.io">Nam Hee Gordon Kim</a><sup>1</sup>,
+            <a href="https://users.aalto.fi/~hamalap5/">Perttu Hämäläinen</a><sup>1</sup>,
+            <a href="http://obrien.berkeley.edu/">James O'Brien</a><sup>2</sup>,
+            <a href="https://xbpeng.github.io/">Xue Bin Peng</a><sup>3</sup>
+            <br>
+            <sup>1</sup> Aalto University, 
+            <sup>2</sup> UC Berkeley, 
+            <sup>3</sup> Simon Fraser University
+          </p>
+
+          <p class="text-center">
+            We train an embodied agent to read Beat Saber notes and perform physically plausible full-body movements.
+            <video width="608" controls autoplay loop muted>
+              <source src="vid/teaser.mp4" type="video/mp4">
+            </video>
+          </p>
+          <hr>
+
+          <h2 class="text-center">Zero-shot evaluation on a heldout song</h2>
+          <p class="text-center">
+            <video width="608" controls autoplay loop muted>
+              <source src="vid/zero_shot.mp4" type="video/mp4">
+            </video><br>
+            When deployed on an unseen song, the agent still displays a reasonable gameplay behaviour!
+          </p>
+          <hr>
+
+          <h2 class="text-center">Ground truth data</h2>
+          <p class="text-center">
+            (Video on top is not part of our data; shown only for visualization)
+            <video width="608" controls autoplay loop muted>
+              <source src="vid/gt_3p.mp4" type="video/mp4">
+            </video><br>
+            An example sequence of recorded VR controller movements collected in the BOXRR-23 dataset.<br>
+            The song metadata and note information are retrieved from the BeatSaver database.<br>
+          </p>
+          <hr>
+
+
+          <h2 class="text-center">Three-point (3P) trajectory generator</h2>
+          <p class="text-center">
+            We train an autoregressive generative model conditioned on the note information the agent observes.<br>
+            We let the agent observe up to 20 notes within the next 2 seconds.
+            We experiment with various architectures, gaining insight regarding the label multimodality and the unique constraints of rhythm games due to temporal purview.
+          </p>
+          <h3 class="text-center">Baseline: MLP-based autoregression model</h3>
+          <p class="text-center">
+            Deployed on an unseen song (Little Big - Faradenza)
+            <video width="608" controls autoplay loop muted>
+              <source src="vid/mlp_3p.mp4" type="video/mp4">
+            </video><br>
+            Heavy amount of jitter is visible, although the playing behaviour is roughly visible.<br>
+            The physics simulation helps reduce the jitter and produces smoother movements down the line (see teaser).
+          </p>
+          <h3 class="text-center">Proposed: Transformer-based tokenized sampling model</h3>
+          <p class="text-center">
+            <video width="608" controls autoplay loop muted>
+              <source src="vid/tf_3p.mp4" type="video/mp4">
+            </video><br>
+            We observe quantization bottleneck to remove most of the jitters, producing robot-like movements.
+          </p>
+          <hr>
+
+          <h2 class="text-center">Questions?</h2>
+          <p class="text-center">
+            Please feel free to ask me anything! You can find my contact information from <a href="http://namheegordonkim.github.io">my website</a> or reach out to me on CoGenAI Slack.
+
+          </p>
+          <hr>
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
