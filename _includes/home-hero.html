@@ -25,31 +25,31 @@
 
           <p class="text-center">
             We train an embodied agent to read Beat Saber notes and perform physically plausible full-body movements.
-            <video width="608" controls autoplay loop muted>
+            <video width="100%" controls autoplay loop muted>
               <source src="vid/teaser.mp4" type="video/mp4">
             </video>
           </p>
-          <hr>
+          <!-- <hr> -->
 
           <h2 class="text-center">Zero-shot evaluation on a heldout song</h2>
           <p class="text-center">
-            <video width="608" controls autoplay loop muted>
+            <video width="100%" controls autoplay loop muted>
               <source src="vid/zero_shot.mp4" type="video/mp4">
             </video><br>
             When deployed on an unseen song, the agent still displays a reasonable gameplay behaviour!
           </p>
-          <hr>
+          <!-- <hr> -->
 
           <h2 class="text-center">Ground truth data</h2>
           <p class="text-center">
             (Video on top is not part of our data; shown only for visualization)
-            <video width="608" controls autoplay loop muted>
+            <video width="100%" controls autoplay loop muted>
               <source src="vid/gt_3p.mp4" type="video/mp4">
             </video><br>
             An example sequence of recorded VR controller movements collected in the BOXRR-23 dataset.<br>
             The song metadata and note information are retrieved from the BeatSaver database.<br>
           </p>
-          <hr>
+          <!-- <hr> -->
 
 
           <h2 class="text-center">Three-point (3P) trajectory generator</h2>
@@ -61,7 +61,7 @@
           <h3 class="text-center">Baseline: MLP-based autoregression model</h3>
           <p class="text-center">
             Deployed on an unseen song (Little Big - Faradenza)
-            <video width="608" controls autoplay loop muted>
+            <video width="100%" controls autoplay loop muted>
               <source src="vid/mlp_3p.mp4" type="video/mp4">
             </video><br>
             Heavy amount of jitter is visible, although the playing behaviour is roughly visible.<br>
@@ -69,19 +69,19 @@
           </p>
           <h3 class="text-center">Proposed: Transformer-based tokenized sampling model</h3>
           <p class="text-center">
-            <video width="608" controls autoplay loop muted>
+            <video width="100%" controls autoplay loop muted>
               <source src="vid/tf_3p.mp4" type="video/mp4">
             </video><br>
             We observe quantization bottleneck to remove most of the jitters, producing robot-like movements.
           </p>
-          <hr>
+          <!-- <hr> -->
 
           <h2 class="text-center">Questions?</h2>
           <p class="text-center">
             Please feel free to ask me anything! You can find my contact information from <a href="http://namheegordonkim.github.io">my website</a> or reach out to me on CoGenAI Slack.
 
           </p>
-          <hr>
+          <!-- <hr> -->
 
 
 
